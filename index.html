@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间环 - 智能穿戴产品</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 页面顶部提示文字 -->
+    <div class="top-banner">建议用电脑浏览本页面，手机请旋转为横屏：按住画面中的海浪说 "外卖，汉堡" 接着松开手，Enjoy it！</div>
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 产品展示区域 -->
+        <div class="product-showcase">
+            <!-- 手臂部分 -->
+            <div class="arm-section">
+                <div class="arm-image-wrapper">
+                    <!-- 屏幕gif，主图下一层，绝对定位并裁剪为圆形 -->
+                    <img src="images/Sea 01.gif" alt="屏幕动画" class="screen-bg-gif-px">
+                    <!-- 主图，固定宽高，z-index更高 -->
+                    <img src="images/arm.png.png" alt="手臂" class="arm-img-px">
+                    <!-- 屏幕内容区域（如按钮、文字等）可放在这里，绝对定位到屏幕圆心 -->
+                    <div class="screen-foreground" id="screen-foreground">
+                        <div class="screen-content">
+                            <div class="time-display">12:34</div>
+                            <div class="date-display">2024.01.15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 产品信息 -->
+            <div class="product-info">
+                <h1 class="product-title">时间环💫</h1>
+                <p class="product-description">「 一句话，两次点击，五秒内提供任何你想要的服务。 」</br>
+                    摆脱喧嚣控制，直达内心理想结果，保护你的时间与注意力。「 <span style='color:#e53935;'>用最快速度获取你想要的服务。</span> 」</br>
+                </p>
+                <div class="demo-tip"> </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 首次引导提示 -->
+    <div class="guide-tip" id="guide-tip">
+        <img src="images/引导.png" alt="引导箭头" class="guide-img">
+    </div>
+
+    <!-- 音乐控制按钮和播放器 -->
+    <div class="music-control" id="music-control">
+        <img src="images/冰淇淋唱片.png" alt="音乐控制" class="music-icon" id="music-icon">
+    </div>
+    <div class="music-tip" id="music-tip">点击右上角冰淇淋可暂停音乐</div>
+    <audio id="bgMusic" src="images/Music.mp3" loop></audio>
+    <script>
+        console.log('renderMain绑定事件');
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
