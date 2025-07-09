@@ -201,14 +201,14 @@ body {
 /* 媒体查询，适配小屏幕 */
 @media (max-width: 768px) {
     .side-buttons-right {
-        right: 15px; /* 适应移动端边距 */
-        top: 40%; /* 适应移动端垂直位置 */
-        transform: translateY(-50%) rotate(5deg);
+        right: 5px; /* 适应移动端边距，向右移动 */
+        top: 50%; /* 保持垂直居中 */
+        transform: translateY(-50%) rotate(31deg); /* 同步桌面端旋转角度 */
     }
     .side-buttons-left {
-        left: 15px; /* 适应移动端边距 */
-        top: 40%; /* 适应移动端垂直位置 */
-        transform: translateY(-50%) rotate(-5deg);
+        left: 5px; /* 适应移动端边距 */
+        top: 50%; /* 保持垂直居中 */
+        transform: translateY(-50%) rotate(-21deg); /* 同步桌面端旋转角度 */
     }
     .sticker-button {
         width: 100px; /* 移动端贴纸尺寸缩小 */
