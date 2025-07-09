@@ -349,14 +349,16 @@ body {
         font-size: 2rem;
         margin-bottom: 5px;
     }
-    
-    .product-description {
-        font-size: 0.9rem;
+    /* 移动端横屏下贴纸按钮位置调整 */
+    .side-buttons-right {
+        right: 100px; /* 横屏时调整右侧位置，增大值 */
+        top: 50%; /* 保持垂直居中 */
+        transform: translateY(-50%) rotate(31deg); /* 保持旋转角度 */
     }
-    
-    .demo-tip {
-        font-size: 0.8rem;
-        margin-top: 5px;
+    .side-buttons-left {
+        left: 100px; /* 横屏时调整左侧位置，增大值 */
+        top: 50%; /* 保持垂直居中 */
+        transform: translateY(-50%) rotate(-21deg); /* 保持旋转角度 */
     }
 }
 
