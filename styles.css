@@ -208,7 +208,7 @@ body {
     .side-buttons-left {
         left: 50%; /* 相对于父容器中心定位 */
         top: 40%; /* 适应移动端垂直位置 */
-        transform: translateY(-30%) translateX(-166px) rotate(-5deg); /* 从中心向左偏移 */
+        transform: translateY(-30%) translateX(-170px) rotate(-5deg); /* 从中心向左偏移 */
     }
     .sticker-button {
         width: 100px; /* 移动端贴纸尺寸缩小 */
@@ -362,12 +362,13 @@ body {
     .side-buttons-right {
         left: 50%; /* 相对于父容器中心定位 */
         top: 45%; /* 保持垂直位置 */
-        transform: translateY(-60%) translateX(166px) rotate(5deg); /* 从中心向右偏移 */
+        transform: translateY(-50%) translateX(180px) rotate(5deg); /* 从中心向右偏移 */
     }
     .side-buttons-left {
-        left: 50%; /* 相对于父容器中心定位 */
-        top: 45%; /* 保持垂直位置 */
-        transform: translateY(-45%) translateX(-100px) rotate(-5deg); /* 从中心向左偏移 */
+        display: none; /* 在移动端横屏时隐藏 */
+        /* left: 50%; */ /* 相对于父容器中心定位 */
+        /* top: 45%; */ /* 保持垂直位置 */
+        /* transform: translateY(-50%) translateX(-80px) rotate(-5deg); */ /* 从中心向左偏移 */
     }
 }
 
