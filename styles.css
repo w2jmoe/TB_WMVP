@@ -162,7 +162,7 @@ body {
 
 .side-buttons-right {
     position: absolute; /* 绝对定位 */
-    right: 100px; /* 调整位置到手臂右侧 */
+    right: 88px; /* 调整位置到手臂右侧 */
     top: 50%; /* 调整垂直位置 */
     transform: translateY(-50%) rotate(31deg); /* 精确垂直居中并添加旋转角度 */
     z-index: 5; /* 确保在手臂图片之上 */
@@ -170,7 +170,7 @@ body {
 
 .side-buttons-left {
     position: absolute; /* 绝对定位 */
-    left: 100px; /* 调整位置到手臂左侧 */
+    left: 90px; /* 调整位置到手臂左侧 */
     top: 50%; /* 调整垂直位置 */
     transform: translateY(-50%) rotate(-21deg); /* 精确垂直居中并添加旋转角度（反向） */
     z-index: 5; /* 确保在手臂图片之上 */
@@ -212,6 +212,23 @@ body {
     }
     .sticker-button {
         width: 100px; /* 移动端贴纸尺寸缩小 */
+    }
+}
+
+/* 移动端横屏优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .side-buttons-right {
+        right: 150px; /* 横屏时，右侧按钮距离右边更远，修正位置 */
+        top: 50%; /* 保持垂直居中 */
+        transform: translateY(-50%) rotate(31deg); /* 保持旋转角度 */
+    }
+    .side-buttons-left {
+        left: 150px; /* 横屏时，左侧按钮距离左边更远，保持对称 */
+        top: 50%; /* 保持垂直居中 */
+        transform: translateY(-50%) rotate(-21deg); /* 保持旋转角度 */
+    }
+    .sticker-button {
+        width: 100px; /* 移动端横屏贴纸尺寸保持不变或微调 */
     }
 }
 
@@ -349,16 +366,14 @@ body {
         font-size: 2rem;
         margin-bottom: 5px;
     }
-    /* 移动端横屏下贴纸按钮位置调整 */
-    .side-buttons-right {
-        right: 100px; /* 横屏时调整右侧位置，增大值 */
-        top: 50%; /* 保持垂直居中 */
-        transform: translateY(-50%) rotate(31deg); /* 保持旋转角度 */
+    
+    .product-description {
+        font-size: 0.9rem;
     }
-    .side-buttons-left {
-        left: 100px; /* 横屏时调整左侧位置，增大值 */
-        top: 50%; /* 保持垂直居中 */
-        transform: translateY(-50%) rotate(-21deg); /* 保持旋转角度 */
+    
+    .demo-tip {
+        font-size: 0.8rem;
+        margin-top: 5px;
     }
 }
 
@@ -918,4 +933,5 @@ body {
     padding: 6px 14px;
     z-index: 2100;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+} 
 } 
