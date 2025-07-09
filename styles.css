@@ -162,17 +162,17 @@ body {
 
 .side-buttons-right {
     position: absolute; /* 绝对定位 */
-    right: 88px; /* 调整位置到手臂右侧 */
+    left: 50%; /* 相对于父容器中心定位 */
     top: 50%; /* 调整垂直位置 */
-    transform: translateY(-50%) rotate(31deg); /* 精确垂直居中并添加旋转角度 */
+    transform: translateY(-50%) translateX(350px) rotate(31deg); /* 精确垂直居中并从中心向右偏移 */
     z-index: 5; /* 确保在手臂图片之上 */
 }
 
 .side-buttons-left {
     position: absolute; /* 绝对定位 */
-    left: 90px; /* 调整位置到手臂左侧 */
+    left: 35%; /* 相对于父容器中心定位 */
     top: 50%; /* 调整垂直位置 */
-    transform: translateY(-50%) rotate(-21deg); /* 精确垂直居中并添加旋转角度（反向） */
+    transform: translateY(-50%) translateX(-350px) rotate(-21deg); /* 精确垂直居中并从中心向左偏移 */
     z-index: 5; /* 确保在手臂图片之上 */
 }
 
@@ -201,14 +201,14 @@ body {
 /* 媒体查询，适配小屏幕 */
 @media (max-width: 768px) {
     .side-buttons-right {
-        right: 15px; /* 适应移动端边距 */
+        left: 50%; /* 相对于父容器中心定位 */
         top: 40%; /* 适应移动端垂直位置 */
-        transform: translateY(-50%) rotate(5deg);
+        transform: translateY(-50%) translateX(100px) rotate(5deg); /* 从中心向右偏移 */
     }
     .side-buttons-left {
-        left: 15px; /* 适应移动端边距 */
+        left: 50%; /* 相对于父容器中心定位 */
         top: 40%; /* 适应移动端垂直位置 */
-        transform: translateY(-50%) rotate(-5deg);
+        transform: translateY(-50%) translateX(-100px) rotate(-5deg); /* 从中心向左偏移 */
     }
     .sticker-button {
         width: 100px; /* 移动端贴纸尺寸缩小 */
@@ -360,14 +360,14 @@ body {
     }
     /* 为横屏模式下的贴纸按钮重新定位 */
     .side-buttons-right {
-        right: 350px; /* 再次增大右侧按钮在横屏时的位置，确保不重叠 */
+        left: 50%; /* 相对于父容器中心定位 */
         top: 45%; /* 保持垂直位置 */
-        transform: translateY(-50%) rotate(5deg);
+        transform: translateY(-50%) translateX(100px) rotate(5deg); /* 从中心向右偏移 */
     }
     .side-buttons-left {
-        left: 50px; /* 调整左侧按钮在横屏时的位置 */
+        left: 50%; /* 相对于父容器中心定位 */
         top: 45%; /* 保持垂直位置 */
-        transform: translateY(-50%) rotate(-5deg);
+        transform: translateY(-50%) translateX(-100px) rotate(-5deg); /* 从中心向左偏移 */
     }
 }
 
