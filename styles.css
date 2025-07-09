@@ -201,34 +201,17 @@ body {
 /* 媒体查询，适配小屏幕 */
 @media (max-width: 768px) {
     .side-buttons-right {
-        right: 5px; /* 适应移动端边距，向右移动 */
-        top: 50%; /* 保持垂直居中 */
-        transform: translateY(-50%) rotate(31deg); /* 同步桌面端旋转角度 */
+        right: 15px; /* 适应移动端边距 */
+        top: 40%; /* 适应移动端垂直位置 */
+        transform: translateY(-50%) rotate(5deg);
     }
     .side-buttons-left {
-        left: 5px; /* 适应移动端边距 */
-        top: 50%; /* 保持垂直居中 */
-        transform: translateY(-50%) rotate(-21deg); /* 同步桌面端旋转角度 */
+        left: 15px; /* 适应移动端边距 */
+        top: 40%; /* 适应移动端垂直位置 */
+        transform: translateY(-50%) rotate(-5deg);
     }
     .sticker-button {
         width: 100px; /* 移动端贴纸尺寸缩小 */
-    }
-}
-
-/* 移动端横屏优化 */
-@media (max-width: 768px) and (orientation: landscape) {
-    .side-buttons-right {
-        right: 150px; /* 横屏时，右侧按钮距离右边更远，修正位置 */
-        top: 50%; /* 保持垂直居中 */
-        transform: translateY(-50%) rotate(31deg); /* 保持旋转角度 */
-    }
-    .side-buttons-left {
-        left: 150px; /* 横屏时，左侧按钮距离左边更远，保持对称 */
-        top: 50%; /* 保持垂直居中 */
-        transform: translateY(-50%) rotate(-21deg); /* 保持旋转角度 */
-    }
-    .sticker-button {
-        width: 100px; /* 移动端横屏贴纸尺寸保持不变或微调 */
     }
 }
 
@@ -374,6 +357,17 @@ body {
     .demo-tip {
         font-size: 0.8rem;
         margin-top: 5px;
+    }
+    /* 为横屏模式下的贴纸按钮重新定位 */
+    .side-buttons-right {
+        right: 350px; /* 再次增大右侧按钮在横屏时的位置，确保不重叠 */
+        top: 45%; /* 保持垂直位置 */
+        transform: translateY(-50%) rotate(5deg);
+    }
+    .side-buttons-left {
+        left: 50px; /* 调整左侧按钮在横屏时的位置 */
+        top: 45%; /* 保持垂直位置 */
+        transform: translateY(-50%) rotate(-5deg);
     }
 }
 
@@ -933,5 +927,4 @@ body {
     padding: 6px 14px;
     z-index: 2100;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-} 
 } 
